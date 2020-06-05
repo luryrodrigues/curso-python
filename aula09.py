@@ -22,7 +22,7 @@ print(frase.lower())  #letras minusculas
 print(frase.capitalize())  #primeiro caracter em maiusculo
 print(frase.title())   #todas as palavras em maiusculo
 frase2='    Aprenda Python    '
-print(frase2.strip())   #retira espaços do começo e do 
+print(frase2.strip())   #retira espaços do começo e do final
 print(frase2.rstrip())  #retira apenas os espaçoes da direita
 print(frase2.lstrip())  #retira apenas os espaços da esquerda
 
@@ -40,3 +40,35 @@ dividido=nome.split()
 semesp=(''.join(dividido))
 print('Seu nome tem {} letras.'.format(len(semesp)))
 print('O primeiro nome tem {} letras.'.format(len(dividido[1])))
+
+#DESAFIO 023
+num=int(input('Digite um número inteiro: '))
+u=num//1%10
+d=num//10%10
+c=num//100%10
+m=num//1000%10
+print('Analisando o número {}.'.format(num))
+print('Unidade: {}'.format(u))
+print('Dezena: {}'.format(d))
+print('Centena: {}'.format(c))
+print('Milhar: {}'.format(m))
+
+#DESAFIO O24
+cid=str(input('Em que cidade você nasceu? '))
+c=cid.lower().strip()
+print('santo' in c[:5])
+
+#DESAFIO 025
+nom=str(input('Qual seu nome completo? ')).strip().lower()
+print('Você tem sobrenome Silva? {}.'.format('silva' in nom))
+
+#DESAFIO 026
+frase=str(input('Digite uma frase: ')).strip().upper()
+print('A letra A aparece {} vezes.'.format(frase.count('A')))
+print('A primeira letra A apareceu na posição {}'.format(frase.find('A')+1))
+print('A última letra A apareceu na posição {}'.format(frase.rfind('A')+1))
+
+#DESAFIO 027
+nome=str(input('Digite seu nome completo: ')).strip().title().split()
+print('Seu primeiro nome é {}.'.format(nome[0]))
+print('Seu último nome é {}.'.format(nome[len(nome)-1]))
