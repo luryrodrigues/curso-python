@@ -133,6 +133,7 @@ else:
 
 #DESAFIO 045 - JOKENPÔ
 import random
+from time import sleep
 itens=('PEDRA','PAPEL','TESOURA')
 c=random.randint(0,2)
 print('''Jogue uma das opções:
@@ -141,12 +142,18 @@ print('''Jogue uma das opções:
 [2] TESOURA''')
 j=int(input('Sua opção: '))
 print('JO')
+sleep(1)
 print('KEN')
+sleep(1)
 print('PÔ!!!')
 print('-='*20)
+sleep(1)
 print('O computador escolheu {}.'.format(itens[c]))
+sleep(1)
 print('O jogador escolheu {}.'.format(itens[j]))
+sleep(1)
 print('-='*20)
+sleep(1)
 if c==j:
     print('EMPATE!!!')
 elif c==0 and j==1:
