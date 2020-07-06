@@ -49,3 +49,61 @@ while cmd!=5:
     else:
         print('Opção inválida. Tente novamente!')
 print('Você saiu do programa!')
+
+#DESAFIO 060
+#Usando MATH
+from math import factorial
+x=int(input('Digite um valor inteiro: '))
+f=factorial(x)
+print('O fatorial de {} é {}.'.format(x,f))
+
+#Usando o WHILE:
+n=int(input('Digite um valor inteiro: '))
+f=1
+while n>0:
+    print('{}'.format(n),end='')
+    print(' x ' if n>1 else ' = ',end='')
+    f*=n  # f=f*n
+    n-=1  # n=n-1
+print (f)
+
+#DESAFIO 061
+print('GERADOR DE PA')
+print('-='*10)
+n1=int(input('Primeiro termo: '))
+r=int(input('Qual a razão? '))
+i=1
+while i<11:
+    print(n1+r,end='')
+    print(' > ' if i!=10 else '\nFIM!',end='')
+    i+=1
+    n1+=r
+
+#DESAFIO 062
+print('GERADOR DE PA')
+print('-='*10)
+n1=int(input('Primeiro termo: '))
+r=int(input('Qual a razão? '))
+i=1
+x=10
+t=0
+while x!=0:
+    t=t+x
+    while i<t+1:
+        print(n1+r,end='')
+        print(' > ' if i!=t else ' PAUSA!',end='')
+        i+=1
+        n1+=r
+    x=int(input('\nQuantos termos você quer mostrar a mais? '))
+print ('Progressão finalizada com {} termos mostrados.'.format(t))
+
+#DESAFIO 063
+print('SEQUÊNCIA DE FIBONACCI!')
+print('-='*12)
+n=int(input('Quantos termos você quer mostrar? '))
+t=0
+t2=1
+while t<n:
+    print('0 > ')
+    t2+=t
+    print(t2)
