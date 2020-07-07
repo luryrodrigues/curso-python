@@ -75,9 +75,11 @@ r=int(input('Qual a razão? '))
 i=1
 while i<11:
     print(n1+r,end='')
-    print(' > ' if i!=10 else '\nFIM!',end='')
+    if i!=10:
+        print(' > ',end='')
     i+=1
     n1+=r
+print (' FIM!')
 
 #DESAFIO 062
 print('GERADOR DE PA')
@@ -101,9 +103,50 @@ print ('Progressão finalizada com {} termos mostrados.'.format(t))
 print('SEQUÊNCIA DE FIBONACCI!')
 print('-='*12)
 n=int(input('Quantos termos você quer mostrar? '))
-t=0
+n=n-2
+c=0
+t1=0
 t2=1
-while t<n:
-    print('0 > ')
-    t2+=t
-    print(t2)
+t3=0
+print('0 > 1 > ',end='')
+while c<n:
+    c+=1
+    t3=t1+t2
+    t1=t2
+    t2=t3
+    print(t3,end='')
+    if c!=n:
+        print(' > ',end='')
+print(' FIM!')
+
+#DESAFIO 064
+n=int(input('Digite número [999 para parar]: '))
+soma=0
+cont=1
+while n!=999:
+    soma+=n
+    cont+=1
+    n=int(input('Digite um número [999 para parar]: '))
+print('Você digitou {} números e a soma deles foi {}.'.format(cont-1,soma))
+
+#DESAFIO 065
+cont=soma=med=n=maior=menor=0    # mesma coisa que declarar cada variável em uma linha, coloca assim para deixar o código menor
+p='Ss'
+while p in 'Ss':
+    n=int(input('Digite número: '))
+    cont+=1
+    soma+=n
+    med=soma/(cont)
+    if cont==1:
+        maior=menor=n
+    else:
+        if n > maior:
+            maior=n
+        if n < menor:
+            menor=n
+    p=str(input('Deseja continuar? [S/N] ')).upper().strip()
+if p in 'Nn':
+    print('Você digitou {} números e a média deles foi {:.1f}.'.format(cont,med))
+    print('O maior valor foi {} e o menor foi {}.'.format(maior,menor))
+elif p not in 'SsNn':
+    print('Comando inválido!!!')
