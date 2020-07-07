@@ -14,3 +14,14 @@ n1 = int(input('Digite um número: '))
 n2 = int(input('Digite outro número: '))
 s = n1 + n2
 print('A soma é igual a : ',s)
+
+#DISSECANDO UMA VARIÁVEL
+# função is retorna informações sobre a variável
+x=input('Digite algo: ')
+print('O tipo primitivo desse valor é: ',type(x))
+print('Só tem espaços? ',x.isspace())
+print('É um número? ',x.isnumeric())
+print('É alfabético? ',x.isalpha())
+print('É alfanumérico? ',x.isalnum())
+print('Está em letras minúsculas? ',x.islower())
+print('Está capitalizada? ',x.istitle())
