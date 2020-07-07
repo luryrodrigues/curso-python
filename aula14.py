@@ -7,7 +7,7 @@ print('Fim!')
 
 n=1
 while n!=0:   #condição de parada
-    n=int(input('Digite um valor: '))
+    n=int(input('Digite um valor: [0 para parar]'))
 print ('Fim!')
 
 #DESAFIO 057
