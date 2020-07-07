@@ -111,24 +111,23 @@ for p in range(1,6):
 print('A pessoa mais pesada tem {} kg e a mais leve tem {} kg.'.format(maior,menor))
 
 #DESAFIO 056
-i=0
-ivelho=0
-nvelho=''
-m20=0
-for p in range(1,3):
+somaidade=mediaidade=maioridadehomem=totmulher20=0
+nomevelho=''
+for p in range(1,4):
     print('-----{}ª PESSOA-----'.format(p))
     nome=str(input('Nome: '))
     idade=int(input('Idade: '))
-    sexo=str(input('Sexo [M/F]: '))
-    i+=idade
-    if p==1 and sexo in 'Mn':
-        ivelho=idade
-        nvelho=nome
-    if sexo in 'Mn' and idade > ivelho:
-        ivelho=idade
-        nvelho=nome
-    if sexo in 'Ff' and idade < 20:
-        m20+=1
-print('A média de idade do grupo é {} anos.'.format(i/4))
-print('O homem mais velho tem {} anos e se chama {}.'.format(ivelho,nvelho))
-print('Ao todo são {} mulheres com menos de 20 anos.'.format(m20))
+    sexo=str(input('Sexo [M/F]: ')).strip().upper()
+    somaidade+=idade
+    if p==1 and sexo in 'Mm':
+        maioridadehomem=idade
+        nomevelho=nome
+    if sexo in 'Mm' and idade>maioridadehomem:
+        maioridadehomem=idade
+        nomevelho=nome
+    if sexo in 'Ff'and idade<20:
+        totmulher20+=1
+mediaidade=somaidade/3
+print('A média de idade do grupo é {:.0f}.'.format(mediaidade))
+print('O homem mais velho tem {} anos e se chama {}.'.format(maioridadehomem,nomevelho))
+print('{} mulher(es) tem menos que 20 anos.'.format(totmulher20))
